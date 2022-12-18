@@ -1,0 +1,438 @@
+<!--
+    Slate for EmulationStation Desktop Edition (slate-DE)
+    Author: Leon Styhre
+    License: Creative Commons CC-BY-NC-SA
+    Based on: recalbox-multi by the Recalbox community
+-->
+
+<theme>
+    <include>./navigationsounds.xml</include>
+    <include>./colors.xml</include>
+
+    <!-- Per-system band colors and platform info -->
+    <variant name="all">
+        <include>./${system.theme}/colors.xml</include>
+        <include>./${system.theme}/systeminfo.xml</include>
+    </variant>
+
+    <variables>
+        <systemConsoleImage>./${system.theme}/images/consolegame.svg</systemConsoleImage>
+        <systemControllerImage>./${system.theme}/images/controller.svg</systemControllerImage>
+        <systemLogo>./${system.theme}/images/logo.svg</systemLogo>
+    </variables>
+
+    <variant name="withVideos, withoutVideos">
+        <view name="system">
+            <carousel name="system_carousel">
+                <pos>-0.1 0</pos>
+                <size>1 0.4</size>
+                <type>horizontal</type>
+                <staticItem>./${system.theme}/images/logo.svg</staticItem>
+                <maxItemCount>1</maxItemCount>
+                <itemSize>0.35 0.13</itemSize>
+                <itemScale>2</itemScale>
+                <itemInterpolation>linear</itemInterpolation>
+                <unfocusedItemOpacity>0.5</unfocusedItemOpacity>
+                <color>00000000</color>
+                <text>${system.fullName}</text>
+                <textColor>${systemCarouselTextColor}</textColor>
+                <fontPath>./core/fonts/Exo2-RegularCondensed.otf</fontPath>
+                <fontSize>0.055</fontSize>
+                <letterCase>uppercase</letterCase>
+                <lineSpacing>1.2</lineSpacing>
+            </carousel>
+            <text name="game_counter">
+                <pos>0.05 0.965</pos>
+                <size>1 0.056</size>
+                <origin>0 0.5</origin>
+                <systemdata>gamecount</systemdata>
+                <fontPath>./core/fonts/vip.otf</fontPath>
+                <fontSize>0.02</fontSize>
+                <horizontalAlignment>left</horizontalAlignment>
+                <color>${systemHelpColor}</color>
+       
+                <letterCase>uppercase</letterCase>
+                <zIndex>50</zIndex>
+            </text>
+            <helpsystem name="help">
+                <pos>.99 0.955</pos>
+			<origin>1 0</origin>
+			<fontPath>./core/fonts/vip.otf</fontPath>
+                <textColor>${systemHelpColor}</textColor>
+                <iconColor>${systemHelpColor}</iconColor>
+                <textColorDimmed>${systemHelpColorDimmed}</textColorDimmed>
+                <iconColorDimmed>${systemHelpColorDimmed}</iconColorDimmed>
+                <fontSize>0.02</fontSize>
+            </helpsystem>
+        </view>
+        <view name="gamelist">
+            <textlist name="gamelist_textlist">
+                <pos>0.024 0.2</pos>
+                <size>0.394 0.73</size>
+                <selectorColor>${gamelistTextlistSelectorColor}</selectorColor>
+                <selectedColor>${gamelistTextlistSelectedColor}</selectedColor>
+                <primaryColor>${gamelistTextlistPrimaryColor}</primaryColor>
+                <secondaryColor>${gamelistTextlistSecondaryColor}</secondaryColor>
+                <fontPath>./core/fonts/vipbold.otf</fontPath>
+                <fontSize>0.02</fontSize>
+                <horizontalAlignment>left</horizontalAlignment>
+                <horizontalMargin>0.01</horizontalMargin>
+                <letterCase>uppercase</letterCase>
+                <indicators>symbols</indicators>
+                <collectionIndicators>symbols</collectionIndicators>
+            </textlist>
+            <helpsystem name="help">
+                <pos>0.99 0.975</pos>
+			<origin>1 1</origin>
+			<fontPath>./core/fonts/vip.otf</fontPath>
+                <textColor>${gamelistHelpColor}</textColor>
+                <iconColor>${gamelistHelpColor}</iconColor>
+                <textColorDimmed>${gamelistHelpColorDimmed}</textColorDimmed>
+                <iconColorDimmed>${gamelistHelpColorDimmed}</iconColorDimmed>
+                <fontSize>0.02</fontSize>
+            </helpsystem>
+        </view>
+    </variant>
+
+    <view name="system, gamelist">
+        <image name="background">
+            <pos>0 0</pos>
+            <size>1 1</size>
+            <path>./core/images/background.png</path>
+            <tile>true</tile>
+            <color>${backgroundColor}</color>
+            <zIndex>0</zIndex>
+        </image>
+		<image name="bottom">
+            <pos>0 0.93</pos>
+            <size>1 0.07</size>
+		<origin>0 0</origin>
+            <path>./core/images/bar.png</path>
+            <color>${gamelistBackFrameColor}</color>
+            <zIndex>10</zIndex>
+        </image>
+        <image name="band1">
+            <pos>0.35 0.58</pos>
+            <size>1 0.03</size>
+		<rotation>-75</rotation>
+            <path>./core/images/band.png</path>
+            <zIndex>5</zIndex>		
+        </image>
+        <image name="band2">
+            <pos>0.36 0.609</pos>
+            <size>1 0.03</size>
+		<rotation>-75</rotation>
+            <path>./core/images/band.png</path>
+            <zIndex>5</zIndex>
+        </image>
+        <image name="band3">
+            <pos>0.37 0.639</pos>
+            <size>1 0.03</size>
+		<rotation>-75</rotation>
+            <path>./core/images/band.png</path>
+            <zIndex>5</zIndex>
+        </image>
+        <image name="band4">
+            <pos>0.38 0.669</pos>
+            <size>1 0.03</size>
+		<rotation>-75</rotation>
+            <path>./core/images/band.png</path>
+            <zIndex>5</zIndex>
+        </image>
+		
+    </view>
+
+    <view name="system">
+        <image name="consolegame">
+            <pos>0.95 0.8</pos>
+            <maxSize>0.4 0.4</maxSize>
+            <origin>1 1</origin>
+            <path>${systemConsoleImage}</path>
+        </image>
+       
+        <text name="info1, info2, info3, info4, info5, info6, info7, info8, info9, info10">
+            <size>0.5 0.03</size>
+            <fontPath>./core/fonts/vip.otf</fontPath>
+            <fontSize>0.023</fontSize>
+            <horizontalAlignment>left</horizontalAlignment>
+            <color>${systemInfoTextColor}</color>
+        </text>
+        <text name="info1">
+            <pos>0.05 0.5</pos>
+        </text>
+        <text name="info2">
+            <pos>0.05 0.53</pos>
+        </text>
+        <text name="info3">
+            <pos>0.05 0.56</pos>
+        </text>
+        <text name="info4">
+            <pos>0.05 0.59</pos>
+        </text>
+        <text name="info5">
+            <pos>0.05 0.62</pos>
+        </text>
+        <text name="info6">
+            <pos>0.05 0.65</pos>
+        </text>
+        <text name="info7">
+            <pos>0.05 0.68</pos>
+        </text>
+        <text name="info8">
+            <pos>0.05 0.71</pos>
+        </text>
+        <text name="info9">
+            <pos>0.05 0.74</pos>
+        </text>
+        <text name="info10">
+            <pos>0.05 0.77</pos>
+        </text>
+    </view>
+
+    <view name="gamelist">
+        <image name="marquee">
+            <pos>0.9 0.18</pos>
+            <maxSize>0.3 0.17</maxSize>
+            <origin>1 1</origin>
+            <imageType>marquee</imageType>
+        </image>
+        <image name="logo">
+            <pos>0.04 0.16</pos>
+            <maxSize>0.32 0.13</maxSize>
+            <origin>0 1</origin>
+            <path>${systemLogo}</path>
+        </image>
+        <image name="backframe2">
+            <pos>0.02 -0.19</pos>
+            <size>0.4 1.5</size>
+		<origin>0 0</origin>
+            <path>./core/images/bar.png</path>
+            <color>${gamelistBackFrameColor}</color>
+            <zIndex>10</zIndex>
+        </image>
+        <image name="backframe3">
+            <pos>0.44 -0.19</pos>
+            <size>0.54 1.5</size>
+		<origin>0 0</origin>
+            <path>./core/images/bar.png</path>
+            <color>${gamelistBackFrameColor}</color>
+            <zIndex>10</zIndex>
+        </image>
+        <text name="md_lbl_releasedate, md_lbl_developer, md_lbl_publisher,
+                    md_lbl_genre, md_lbl_players, md_lbl_lastplayed ">
+            <size>0.14 0.02</size>
+            <fontPath>./core/fonts/vipbold.otf</fontPath>
+            <fontSize>0.02</fontSize>
+            <color>${gamelistDefaultTextColor}</color>
+            <letterCase>uppercase</letterCase>
+        </text>
+        <text name="md_developer, md_publisher, md_genre, md_players">
+            <size>0.14 0.02</size>
+            <fontPath>./core/fonts/vipitalic.otf</fontPath>
+            <fontSize>0.0195</fontSize>
+            <color>${gamelistDefaultTextColor}</color>
+            <letterCase>uppercase</letterCase>
+        </text>
+        <text name="md_description">
+            <pos>0.454 0.675</pos>
+            <size>0.515 0.242</size>
+            <container>true</container>
+            <containerVerticalSnap>true</containerVerticalSnap>
+            <containerScrollSpeed>1</containerScrollSpeed>
+            <containerStartDelay>4.5</containerStartDelay>
+            <containerResetDelay>7</containerResetDelay>
+            <metadata>description</metadata>
+            <fontPath>./core/fonts/vip.otf</fontPath>
+            <fontSize>0.022</fontSize>
+            <color>${gamelistDefaultTextColor}</color>
+            <letterCase>uppercase</letterCase>
+            <lineSpacing>1.2</lineSpacing>
+        </text>
+        <datetime name="md_releasedate, md_lastplayed">
+            <size>0.14 0.02</size>
+            <fontPath>./core/fonts/vipitalic.otf</fontPath>
+            <fontSize>0.0195</fontSize>
+            <color>${gamelistDefaultTextColor}</color>
+            <letterCase>uppercase</letterCase>
+        </datetime>
+        <text name="md_lbl_releasedate">
+            <pos>0.815 0.2755</pos>
+            <text>Released:</text>
+            <metadataElement>true</metadataElement>
+        </text>
+        <datetime name="md_releasedate">
+            <pos>0.83 0.3005</pos>
+            <metadata>releasedate</metadata>
+        </datetime>
+        <text name="md_lbl_developer">
+            <pos>0.815 0.3355</pos>
+            <text>Developer:</text>
+            <metadataElement>true</metadataElement>
+        </text>
+        <text name="md_developer">
+            <pos>0.83 0.3605</pos>
+            <metadata>developer</metadata>
+        </text>
+        <text name="md_lbl_publisher">
+            <pos>0.815 0.3955</pos>
+            <text>Publisher:</text>
+            <metadataElement>true</metadataElement>
+        </text>
+        <text name="md_publisher">
+            <pos>0.83 0.4205</pos>
+            <metadata>publisher</metadata>
+        </text>
+        <text name="md_lbl_genre">
+            <pos>0.815 0.4555</pos>
+            <text>Genre:</text>
+            <metadataElement>true</metadataElement>
+        </text>
+        <text name="md_genre">
+            <pos>0.83 0.4805</pos>
+            <metadata>genre</metadata>
+        </text>
+        <text name="md_lbl_players">
+            <pos>0.815 0.5155</pos>
+            <text>Players:</text>
+            <metadataElement>true</metadataElement>
+        </text>
+        <text name="md_players">
+            <pos>0.83 0.5405</pos>
+            <metadata>players</metadata>
+        </text>
+        <text name="md_lbl_lastplayed">
+            <pos>0.815 0.5755</pos>
+            <text>Last played:</text>
+            <metadataElement>true</metadataElement>
+        </text>
+        <datetime name="md_lastplayed">
+            <pos>0.83 0.6005</pos>
+            <metadata>lastplayed</metadata>
+        </datetime>
+        <rating name="md_rating">
+            <pos>0.453 0.203</pos>
+            <size>0 0.03</size>
+            <interpolation>nearest</interpolation>
+            <color>${gamelistRatingColor}</color>
+            <filledPath>./core/images/rating_filled.svg</filledPath>
+            <unfilledPath>./core/images/rating_empty.svg</unfilledPath>
+            <overlay>false</overlay>
+        </rating>
+        <gamelistinfo name="gamelistInfo">
+            <pos>0.773 0.192</pos>
+            <size>0.2 0.042</size>
+            <fontPath>./core/fonts/Exo2-BoldCondensed.otf</fontPath>
+            <fontSize>0.025</fontSize>
+            <horizontalAlignment>right</horizontalAlignment>
+            <color>${gamelistInfoColor}</color>
+        </gamelistinfo>
+        <badges name="md_badges">
+            <pos>0.815 0.675</pos>
+            <size>0.13 0.235</size>
+            <horizontalAlignment>left</horizontalAlignment>
+            <direction>row</direction>
+            <lines>3</lines>
+            <itemsPerLine>3</itemsPerLine>
+            <slots>collection, folder, favorite, completed, kidgame, broken, controller, altemulator</slots>
+            <controllerPos>0.5 0.572</controllerPos>
+            <controllerSize>0.81</controllerSize>
+            <folderLinkPos>0.54 0.64</folderLinkPos>
+            <folderLinkSize>0.31</folderLinkSize>
+            <itemMargin>-1.0 0.005</itemMargin>
+        </badges>
+    </view>
+
+    <variant name="withVideos">
+        <view name="gamelist">
+            <video name="md_video">
+                <pos>0.63 0.45</pos>
+                <maxSize>0.356 0.424</maxSize>
+                <origin>0.5 0.5</origin>
+                <imageType>image</imageType>
+                <interpolation>nearest</interpolation>
+                <pillarboxes>true</pillarboxes>
+                <pillarboxThreshold>0.85 0.90</pillarboxThreshold>
+                <delay>1.7</delay>
+                <scrollFadeIn>true</scrollFadeIn>
+            </video>
+        </view>
+    </variant>
+
+    <variant name="withoutVideos">
+        <view name="gamelist">
+            <image name="md_image">
+                <pos>0.63 0.45</pos>
+                <maxSize>0.360 0.424</maxSize>
+                <origin>0.5 0.5</origin>
+                <imageType>image</imageType>
+                <interpolation>nearest</interpolation>
+                <scrollFadeIn>true</scrollFadeIn>
+            </image>
+        </view>
+    </variant>
+
+    <variant name="noMedia">
+        <view name="gamelist">
+            <image name="backframe1">
+                <pos>0.02 0.19</pos>
+                <size>0.96 0.735</size>
+                <path>./core/images/frame.png</path>
+                <color>${gamelistBackFrameColor}</color>
+            </image>
+            <textlist name="gamelist_textlist">
+                <pos>0.04 0.201</pos>
+                <size>0.92 0.71</size>
+                <horizontalAlignment>center</horizontalAlignment>
+                <horizontalMargin>0.01</horizontalMargin>
+            </textlist>
+        </view>
+    </variant>
+
+    <variant name="withVideos, withoutVideos">
+        <aspectRatio name="4:3">
+            <view name="system, gamelist">
+                <helpsystem name="help">
+                    <pos>0.012 0.955</pos>
+                    <fontSize>0.034</fontSize>
+                </helpsystem>
+            </view>
+            <view name="system">
+                <text name="info1, info2, info3, info4, info5, info6, info7, info8, info9, info10">
+                    <size>0.44 0.03</size>
+                </text>
+                <text name="info1">
+                    <pos>0.34 0.695</pos>
+                </text>
+                <text name="info2">
+                    <pos>0.34 0.716</pos>
+                </text>
+                <text name="info3">
+                    <pos>0.34 0.737</pos>
+                </text>
+                <text name="info4">
+                    <pos>0.34 0.758</pos>
+                </text>
+                <text name="info5">
+                    <pos>0.34 0.799</pos>
+                </text>
+                <text name="info6">
+                    <pos>0.34 0.820</pos>
+                </text>
+                <text name="info7">
+                    <pos>0.34 0.841</pos>
+                </text>
+                <text name="info8">
+                    <pos>0.34 0.862</pos>
+                </text>
+                <text name="info9">
+                    <pos>0.34 0.883</pos>
+                </text>
+                <text name="info10">
+                    <pos>0.34 0.904</pos>
+                </text>
+            </view>
+        </aspectRatio>
+    </variant>
+
+    
+</theme>
