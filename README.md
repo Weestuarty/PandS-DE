@@ -1,6 +1,6 @@
 # PandS-DE for EmulationStation Desktop Edition
 
-slate-DE is a theme set for ES-DE that supports all systems as well as the latest application features.
+PandS-DE is a theme set for ES-DE that supports all systems as well as the latest application features.
 
 ![systems](sys.png)#
 ![games](game.png)
