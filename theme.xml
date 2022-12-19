@@ -235,7 +235,7 @@
         </text>
         <text name="md_description">
             <pos>0.454 0.675</pos>
-            <size>0.515 0.242</size>
+            <size>0.485 0.242</size>
             <container>true</container>
             <containerVerticalSnap>true</containerVerticalSnap>
             <containerScrollSpeed>1</containerScrollSpeed>
@@ -327,10 +327,10 @@
             <color>${gamelistInfoColor}</color>
         </gamelistinfo>
         <badges name="md_badges">
-            <pos>0.815 0.675</pos>
-            <size>0.13 0.235</size>
+            <pos>0.94 0.2755</pos>
+            <size>0.1 0.7</size>
             <horizontalAlignment>left</horizontalAlignment>
-            <direction>row</direction>
+            <direction>column</direction>
             <lines>3</lines>
             <itemsPerLine>3</itemsPerLine>
             <slots>collection, folder, favorite, completed, kidgame, broken, controller, altemulator</slots>
