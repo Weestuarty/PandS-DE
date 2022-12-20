@@ -5,7 +5,7 @@ PandS-DE is a theme set for ES-DE that supports all systems as well as the lates
 ![systems](sys.png)
 ![games](game.png)
 
-The following options are included:
+The following options are included: 
 
 2 variants:
 
