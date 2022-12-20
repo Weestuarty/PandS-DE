@@ -24,13 +24,14 @@
     <variant name="withVideos, withoutVideos">
         <view name="system">
             <carousel name="system_carousel">
-                <pos>-0.1 0</pos>
-                <size>1 0.4</size>
-                <type>horizontal</type>
+                <pos>0.02 0</pos>
+                <size>0.25 1</size>
+                <type>vertical</type>
                 <staticItem>./${system.theme}/images/logo.svg</staticItem>
-                <maxItemCount>1</maxItemCount>
-                <itemSize>0.35 0.13</itemSize>
-                <itemScale>2</itemScale>
+                <maxItemCount>5</maxItemCount>
+                <itemSize>0.125 0.09</itemSize>
+                <itemScale>1.9</itemScale>
+			<itemHorizontalAlignment>left</itemHorizontalAlignment>
                 <itemInterpolation>linear</itemInterpolation>
                 <unfocusedItemOpacity>0.5</unfocusedItemOpacity>
                 <color>00000000</color>
@@ -40,9 +41,24 @@
                 <fontSize>0.055</fontSize>
                 <letterCase>uppercase</letterCase>
                 <lineSpacing>1.2</lineSpacing>
+			<zIndex>29</zIndex>
             </carousel>
+		<image name="car1">
+            <pos>0 -.2</pos>
+            <size>0.17 .8</size>
+            <path>./core/images/bar.png</path>
+            <color>${systemCarouselColor}</color>
+            <zIndex>11</zIndex>
+        </image>
+		<image name="car2">
+            <pos>0 .4</pos>
+            <size>0.17 .82</size>
+            <path>./core/images/bar.png</path>
+            <color>${systemCarouselColor}</color>
+            <zIndex>11</zIndex>
+        </image>
             <text name="game_counter">
-                <pos>0.05 0.965</pos>
+                <pos>0.2 0.965</pos>
                 <size>1 0.056</size>
                 <origin>0 0.5</origin>
                 <systemdata>gamecount</systemdata>
@@ -67,11 +83,11 @@
         </view>
         <view name="gamelist">
             <textlist name="gamelist_textlist">
-                <pos>0.024 0.2</pos>
-                <size>0.394 0.73</size>
+                <pos>0.024 0.225</pos>
+                <size>0.394 0.71</size>
                 <selectorColor>${gamelistTextlistSelectorColor}</selectorColor>
                 <selectedColor>${gamelistTextlistSelectedColor}</selectedColor>
-                <primaryColor>${gamelistTextlistPrimaryColor}</primaryColor>
+                <primaryColor>${systemInfoTextColor}</primaryColor>
                 <secondaryColor>${gamelistTextlistSecondaryColor}</secondaryColor>
                 <fontPath>./core/fonts/vipbold.otf</fontPath>
                 <fontSize>0.02</fontSize>
@@ -108,7 +124,7 @@
             <size>1 0.07</size>
 		<origin>0 0</origin>
             <path>./core/images/bar.png</path>
-            <color>${gamelistBackFrameColor}</color>
+            <color>${systemCarouselColor}</color>
             <zIndex>10</zIndex>
         </image>
         <image name="band1">
@@ -144,48 +160,48 @@
 
     <view name="system">
         <image name="consolegame">
-            <pos>0.95 0.8</pos>
+            <pos>0.75 0.45</pos>
             <maxSize>0.4 0.4</maxSize>
             <origin>1 1</origin>
             <path>${systemConsoleImage}</path>
         </image>
        
         <text name="info1, info2, info3, info4, info5, info6, info7, info8, info9, info10">
-            <size>0.5 0.03</size>
+            <size>0.6 0.03</size>
             <fontPath>./core/fonts/vip.otf</fontPath>
             <fontSize>0.023</fontSize>
             <horizontalAlignment>left</horizontalAlignment>
             <color>${systemInfoTextColor}</color>
         </text>
         <text name="info1">
-            <pos>0.05 0.5</pos>
+            <pos>0.25 0.6</pos>
         </text>
         <text name="info2">
-            <pos>0.05 0.53</pos>
+            <pos>0.25 0.63</pos>
         </text>
         <text name="info3">
-            <pos>0.05 0.56</pos>
+            <pos>0.25 0.66</pos>
         </text>
         <text name="info4">
-            <pos>0.05 0.59</pos>
+            <pos>0.25 0.69</pos>
         </text>
         <text name="info5">
-            <pos>0.05 0.62</pos>
+            <pos>0.25 0.72</pos>
         </text>
         <text name="info6">
-            <pos>0.05 0.65</pos>
+            <pos>0.25 0.75</pos>
         </text>
         <text name="info7">
-            <pos>0.05 0.68</pos>
+            <pos>0.25 0.78</pos>
         </text>
         <text name="info8">
-            <pos>0.05 0.71</pos>
+            <pos>0.25 0.81</pos>
         </text>
         <text name="info9">
-            <pos>0.05 0.74</pos>
+            <pos>0.25 0.84</pos>
         </text>
         <text name="info10">
-            <pos>0.05 0.77</pos>
+            <pos>0.25 0.87</pos>
         </text>
     </view>
 
@@ -203,12 +219,12 @@
             <path>${systemLogo}</path>
         </image>
         <image name="backframe2">
-            <pos>0.02 -0.19</pos>
-            <size>0.4 1.5</size>
+            <pos>0.445 -0.17</pos>
+            <size>0.53 1.46</size>
 		<origin>0 0</origin>
             <path>./core/images/bar.png</path>
-            <color>${gamelistBackFrameColor}</color>
-            <zIndex>10</zIndex>
+            <color>${backgroundColor}</color>
+            <zIndex>11</zIndex>
         </image>
         <image name="backframe3">
             <pos>0.44 -0.19</pos>
@@ -256,61 +272,61 @@
             <letterCase>uppercase</letterCase>
         </datetime>
         <text name="md_lbl_releasedate">
-            <pos>0.815 0.2755</pos>
+            <pos>0.815 0.2955</pos>
             <text>Released:</text>
             <metadataElement>true</metadataElement>
         </text>
         <datetime name="md_releasedate">
-            <pos>0.83 0.3005</pos>
+            <pos>0.83 0.3205</pos>
             <metadata>releasedate</metadata>
         </datetime>
         <text name="md_lbl_developer">
-            <pos>0.815 0.3355</pos>
+            <pos>0.815 0.3555</pos>
             <text>Developer:</text>
             <metadataElement>true</metadataElement>
         </text>
         <text name="md_developer">
-            <pos>0.83 0.3605</pos>
+            <pos>0.83 0.3805</pos>
             <metadata>developer</metadata>
         </text>
         <text name="md_lbl_publisher">
-            <pos>0.815 0.3955</pos>
+            <pos>0.815 0.4155</pos>
             <text>Publisher:</text>
             <metadataElement>true</metadataElement>
         </text>
         <text name="md_publisher">
-            <pos>0.83 0.4205</pos>
+            <pos>0.83 0.4405</pos>
             <metadata>publisher</metadata>
         </text>
         <text name="md_lbl_genre">
-            <pos>0.815 0.4555</pos>
+            <pos>0.815 0.4755</pos>
             <text>Genre:</text>
             <metadataElement>true</metadataElement>
         </text>
         <text name="md_genre">
-            <pos>0.83 0.4805</pos>
+            <pos>0.83 0.5005</pos>
             <metadata>genre</metadata>
         </text>
         <text name="md_lbl_players">
-            <pos>0.815 0.5155</pos>
+            <pos>0.815 0.5355</pos>
             <text>Players:</text>
             <metadataElement>true</metadataElement>
         </text>
         <text name="md_players">
-            <pos>0.83 0.5405</pos>
+            <pos>0.83 0.5605</pos>
             <metadata>players</metadata>
         </text>
         <text name="md_lbl_lastplayed">
-            <pos>0.815 0.5755</pos>
+            <pos>0.815 0.5955</pos>
             <text>Last played:</text>
             <metadataElement>true</metadataElement>
         </text>
         <datetime name="md_lastplayed">
-            <pos>0.83 0.6005</pos>
+            <pos>0.83 0.6205</pos>
             <metadata>lastplayed</metadata>
         </datetime>
         <rating name="md_rating">
-            <pos>0.453 0.203</pos>
+            <pos>0.815 0.2455</pos>
             <size>0 0.03</size>
             <interpolation>nearest</interpolation>
             <color>${gamelistRatingColor}</color>
@@ -319,15 +335,15 @@
             <overlay>false</overlay>
         </rating>
         <gamelistinfo name="gamelistInfo">
-            <pos>0.773 0.192</pos>
+            <pos>0.21 0.186</pos>
             <size>0.2 0.042</size>
             <fontPath>./core/fonts/Exo2-BoldCondensed.otf</fontPath>
             <fontSize>0.025</fontSize>
             <horizontalAlignment>right</horizontalAlignment>
-            <color>${gamelistInfoColor}</color>
+            <color>${systemInfoTextColor}</color>
         </gamelistinfo>
         <badges name="md_badges">
-            <pos>0.94 0.2755</pos>
+            <pos>0.94 0.2455</pos>
             <size>0.1 0.7</size>
             <horizontalAlignment>left</horizontalAlignment>
             <direction>column</direction>
@@ -389,49 +405,9 @@
     </variant>
 
     <variant name="withVideos, withoutVideos">
-        <aspectRatio name="4:3">
-            <view name="system, gamelist">
-                <helpsystem name="help">
-                    <pos>0.012 0.955</pos>
-                    <fontSize>0.034</fontSize>
-                </helpsystem>
-            </view>
-            <view name="system">
-                <text name="info1, info2, info3, info4, info5, info6, info7, info8, info9, info10">
-                    <size>0.44 0.03</size>
-                </text>
-                <text name="info1">
-                    <pos>0.34 0.695</pos>
-                </text>
-                <text name="info2">
-                    <pos>0.34 0.716</pos>
-                </text>
-                <text name="info3">
-                    <pos>0.34 0.737</pos>
-                </text>
-                <text name="info4">
-                    <pos>0.34 0.758</pos>
-                </text>
-                <text name="info5">
-                    <pos>0.34 0.799</pos>
-                </text>
-                <text name="info6">
-                    <pos>0.34 0.820</pos>
-                </text>
-                <text name="info7">
-                    <pos>0.34 0.841</pos>
-                </text>
-                <text name="info8">
-                    <pos>0.34 0.862</pos>
-                </text>
-                <text name="info9">
-                    <pos>0.34 0.883</pos>
-                </text>
-                <text name="info10">
-                    <pos>0.34 0.904</pos>
-                </text>
-            </view>
-        </aspectRatio>
+       
+            
+       
     </variant>
 
     

@@ -21,27 +21,27 @@
             <backgroundColor>404040</backgroundColor>
 
             <!-- System view -->
-            <systemCarouselColor>747474D8</systemCarouselColor>
+            <systemCarouselColor>707070</systemCarouselColor>
             <systemCarouselTextColor>F0F0F0</systemCarouselTextColor>
             <systemGameCounterColor>C6C6C6</systemGameCounterColor>
             <systemGameCounterBackgroundColor>555555D8</systemGameCounterBackgroundColor>
 
             <systemInfoTextColor>B6B6B6</systemInfoTextColor>
-            <systemHelpColor>404040</systemHelpColor>
+            <systemHelpColor>afafaf</systemHelpColor>
             <systemHelpColorDimmed>404040</systemHelpColorDimmed>
 
             <!-- Gamelist view -->
-            <gamelistBackFrameColor>6F6F6F</gamelistBackFrameColor>
+            <gamelistBackFrameColor>afafaf</gamelistBackFrameColor>
             <gamelistTextlistSelectorColor>161616</gamelistTextlistSelectorColor>
             <gamelistTextlistSelectedColor>AFAFAF</gamelistTextlistSelectedColor>
             <gamelistTextlistPrimaryColor>000000</gamelistTextlistPrimaryColor>
             <gamelistTextlistSecondaryColor>333333</gamelistTextlistSecondaryColor>
 
-            <gamelistDefaultTextColor>000000</gamelistDefaultTextColor>
+            <gamelistDefaultTextColor>afafaf</gamelistDefaultTextColor>
             <gamelistInfoColor>303030</gamelistInfoColor>
             <gamelistRatingColor>606060</gamelistRatingColor>
 
-            <gamelistHelpColor>404040</gamelistHelpColor>
+            <gamelistHelpColor>afafaf</gamelistHelpColor>
             <gamelistHelpColorDimmed>404040</gamelistHelpColorDimmed>
         </variables>
     </colorScheme>
@@ -52,7 +52,7 @@
             <backgroundColor>707070</backgroundColor>
 
             <!-- System view -->
-            <systemCarouselColor>FFFFFFD8</systemCarouselColor>
+            <systemCarouselColor>404040</systemCarouselColor>
             <systemCarouselTextColor>262626</systemCarouselTextColor>
             <systemGameCounterColor>202020</systemGameCounterColor>
             <systemGameCounterBackgroundColor>DDDDDDD8</systemGameCounterBackgroundColor>
@@ -62,7 +62,7 @@
             <systemHelpColorDimmed>B6B6B6</systemHelpColorDimmed>
 
             <!-- Gamelist view -->
-            <gamelistBackFrameColor>9F9F9F</gamelistBackFrameColor>
+            <gamelistBackFrameColor>262626</gamelistBackFrameColor>
             <gamelistTextlistSelectorColor>262626</gamelistTextlistSelectorColor>
             <gamelistTextlistSelectedColor>9F9F9F</gamelistTextlistSelectedColor>
             <gamelistTextlistPrimaryColor>262626</gamelistTextlistPrimaryColor>
