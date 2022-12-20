@@ -12,7 +12,7 @@ The following options are included:
 - Textlist with videos
 - Textlist without videos
 
-2 color schemes:
+2 color schemes: 
 
 - Dark mode
 - Light mode
