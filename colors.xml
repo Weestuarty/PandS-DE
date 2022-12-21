@@ -27,7 +27,7 @@
             <systemGameCounterBackgroundColor>555555D8</systemGameCounterBackgroundColor>
 
             <systemInfoTextColor>B6B6B6</systemInfoTextColor>
-            <systemHelpColor>afafaf</systemHelpColor>
+            <systemHelpColor>B6B6B6</systemHelpColor>
             <systemHelpColorDimmed>404040</systemHelpColorDimmed>
 
             <!-- Gamelist view -->

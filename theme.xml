@@ -1,8 +1,8 @@
 <!--
-    Slate for EmulationStation Desktop Edition (slate-DE)
-    Author: Leon Styhre
+    Plain and Simple for EmulationStation Desktop Edition (PandS-DE)
+    Author: Stuart Learmonth
     License: Creative Commons CC-BY-NC-SA
-    Based on: recalbox-multi by the Recalbox community
+    Based on: Slate-DE by Leon recalbox-multi by the Recalbox community
 -->
 
 <theme>
@@ -28,10 +28,10 @@
                 <size>0.25 1</size>
                 <type>vertical</type>
                 <staticItem>./${system.theme}/images/logo.svg</staticItem>
-                <maxItemCount>5</maxItemCount>
-                <itemSize>0.125 0.09</itemSize>
-                <itemScale>1.9</itemScale>
-			<itemHorizontalAlignment>left</itemHorizontalAlignment>
+                <maxItemCount>7</maxItemCount>
+                <itemSize>0.125 0.065</itemSize>
+                <itemScale>1.8</itemScale>
+			    <itemHorizontalAlignment>left</itemHorizontalAlignment>
                 <itemInterpolation>linear</itemInterpolation>
                 <unfocusedItemOpacity>0.5</unfocusedItemOpacity>
                 <color>00000000</color>
@@ -41,22 +41,22 @@
                 <fontSize>0.055</fontSize>
                 <letterCase>uppercase</letterCase>
                 <lineSpacing>1.2</lineSpacing>
-			<zIndex>29</zIndex>
+			    <zIndex>29</zIndex>
             </carousel>
-		<image name="car1">
-            <pos>0 -.2</pos>
-            <size>0.17 .8</size>
-            <path>./core/images/bar.png</path>
-            <color>${systemCarouselColor}</color>
-            <zIndex>11</zIndex>
-        </image>
-		<image name="car2">
-            <pos>0 .4</pos>
-            <size>0.17 .82</size>
-            <path>./core/images/bar.png</path>
-            <color>${systemCarouselColor}</color>
-            <zIndex>11</zIndex>
-        </image>
+		    <image name="car1">
+                <pos>0 -.25</pos>
+                <size>0.17 .9</size>
+                <path>./core/images/bar.png</path>
+                <color>${systemCarouselColor}</color>
+                <zIndex>11</zIndex>
+            </image>
+		    <image name="car2">
+                <pos>0 .37</pos>
+                <size>0.17 .86</size>
+                <path>./core/images/bar.png</path>
+                <color>${systemCarouselColor}</color>
+                <zIndex>11</zIndex>
+            </image>
             <text name="game_counter">
                 <pos>0.2 0.965</pos>
                 <size>1 0.056</size>
@@ -72,8 +72,8 @@
             </text>
             <helpsystem name="help">
                 <pos>.99 0.955</pos>
-			<origin>1 0</origin>
-			<fontPath>./core/fonts/vip.otf</fontPath>
+			    <origin>1 0</origin>
+			    <fontPath>./core/fonts/vip.otf</fontPath>
                 <textColor>${systemHelpColor}</textColor>
                 <iconColor>${systemHelpColor}</iconColor>
                 <textColorDimmed>${systemHelpColorDimmed}</textColorDimmed>
@@ -84,7 +84,7 @@
         <view name="gamelist">
             <textlist name="gamelist_textlist">
                 <pos>0.024 0.225</pos>
-                <size>0.394 0.71</size>
+                <size>0.42 0.71</size>
                 <selectorColor>${gamelistTextlistSelectorColor}</selectorColor>
                 <selectedColor>${gamelistTextlistSelectedColor}</selectedColor>
                 <primaryColor>${systemInfoTextColor}</primaryColor>
@@ -99,8 +99,8 @@
             </textlist>
             <helpsystem name="help">
                 <pos>0.99 0.975</pos>
-			<origin>1 1</origin>
-			<fontPath>./core/fonts/vip.otf</fontPath>
+			    <origin>1 1</origin>
+			    <fontPath>./core/fonts/vip.otf</fontPath>
                 <textColor>${gamelistHelpColor}</textColor>
                 <iconColor>${gamelistHelpColor}</iconColor>
                 <textColorDimmed>${gamelistHelpColorDimmed}</textColorDimmed>
@@ -122,7 +122,7 @@
 		<image name="bottom">
             <pos>0 0.93</pos>
             <size>1 0.07</size>
-		<origin>0 0</origin>
+		    <origin>0 0</origin>
             <path>./core/images/bar.png</path>
             <color>${systemCarouselColor}</color>
             <zIndex>10</zIndex>
@@ -130,28 +130,28 @@
         <image name="band1">
             <pos>0.35 0.58</pos>
             <size>1 0.03</size>
-		<rotation>-75</rotation>
+		    <rotation>-75</rotation>
             <path>./core/images/band.png</path>
             <zIndex>5</zIndex>		
         </image>
         <image name="band2">
             <pos>0.36 0.609</pos>
             <size>1 0.03</size>
-		<rotation>-75</rotation>
+		    <rotation>-75</rotation>
             <path>./core/images/band.png</path>
             <zIndex>5</zIndex>
         </image>
         <image name="band3">
             <pos>0.37 0.639</pos>
             <size>1 0.03</size>
-		<rotation>-75</rotation>
+		    <rotation>-75</rotation>
             <path>./core/images/band.png</path>
             <zIndex>5</zIndex>
         </image>
         <image name="band4">
             <pos>0.38 0.669</pos>
             <size>1 0.03</size>
-		<rotation>-75</rotation>
+		    <rotation>-75</rotation>
             <path>./core/images/band.png</path>
             <zIndex>5</zIndex>
         </image>
@@ -169,7 +169,7 @@
         <text name="info1, info2, info3, info4, info5, info6, info7, info8, info9, info10">
             <size>0.6 0.03</size>
             <fontPath>./core/fonts/vip.otf</fontPath>
-            <fontSize>0.023</fontSize>
+            <fontSize>0.022</fontSize>
             <horizontalAlignment>left</horizontalAlignment>
             <color>${systemInfoTextColor}</color>
         </text>
