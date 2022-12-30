@@ -27,12 +27,12 @@
                 <pos>0.02 0</pos>
                 <size>0.25 1</size>
                 <type>vertical</type>
-                <staticItem>./${system.theme}/images/logo.svg</staticItem>
+                <staticImage>./${system.theme}/images/logo.svg</staticImage>
                 <maxItemCount>7</maxItemCount>
                 <itemSize>0.125 0.065</itemSize>
                 <itemScale>1.8</itemScale>
 			    <itemHorizontalAlignment>left</itemHorizontalAlignment>
-                <itemInterpolation>linear</itemInterpolation>
+                <imageInterpolation>linear</imageInterpolation>
                 <unfocusedItemOpacity>0.5</unfocusedItemOpacity>
                 <color>00000000</color>
                 <text>${system.fullName}</text>
